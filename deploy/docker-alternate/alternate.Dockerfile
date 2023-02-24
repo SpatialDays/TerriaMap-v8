@@ -5,7 +5,6 @@ RUN mkdir -p /usr/src/app && mkdir -p /etc/config/client
 WORKDIR /usr/src/app
 
 COPY ./package.json ./
-COPY ./package-lock.json ./
 
 RUN npm install
 
