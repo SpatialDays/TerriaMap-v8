@@ -40,9 +40,6 @@ export default function UserInterface(props) {
             key="about-link"
           />
         ) : null}
-        {relatedMaps && relatedMaps.length > 0 ? (
-          <RelatedMaps relatedMaps={relatedMaps} />
-        ) : null}
       </MenuLeft>
       <ExperimentalMenu>
         {/* <If condition={isBrowserSupportedAV()}>
