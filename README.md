@@ -1,5 +1,13 @@
 # Terria Map
 
+## Building a dev server
+
+1. Move TerriaJS to packages/terriajs
+2. Change the package.json version to a number that is non existant in npm
+3. Run `yarn install` in the root directory
+4. Run `yarn gulp` in the root directory
+5. Run `yarn start` in the root directory
+
 [![Build Status](https://github.com/TerriaJS/TerriaMap/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/TerriaJS/TerriaMap/actions/workflows/ci.yml) [![Docs](https://img.shields.io/badge/docs-online-blue.svg)](https://docs.terria.io/)
 
 ![Terria logo](terria-logo.png "Terria logo")
