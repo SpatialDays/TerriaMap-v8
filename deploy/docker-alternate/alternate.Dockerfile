@@ -21,14 +21,14 @@ RUN cp -r wwwroot/help/img/help_solomon/. wwwroot/help/img/.
 RUN cp wwwroot/images/SI_high.png wwwroot/images/help_logo.png
 RUN yarn gulp release --build Solomons
 
-# Vanuatu build stage
-FROM build AS vanuatu_build
-RUN sed -i 's/hsl(209, 79%, 42%)/hsl(44, 92%, 45%)/' lib/Styles/variables.scss
-RUN sed -i 's/Solomon Islands/Vanuatu/' node_modules/terriajs/wwwroot/languages/en/translation.json
-RUN yarn gulp release --build Vanuatu
+# # Vanuatu build stage
+# FROM build AS vanuatu_build
+# RUN sed -i 's/hsl(209, 79%, 42%)/hsl(44, 92%, 45%)/' lib/Styles/variables.scss
+# RUN sed -i 's/Solomon Islands/Vanuatu/' node_modules/terriajs/wwwroot/languages/en/translation.json
+# RUN yarn gulp release --build Vanuatu
 
 # Primary application server stage
-FROM build AS server
+FROM solomon_build AS server
 EXPOSE 3001
 
 CMD [ "node", "./node_modules/terriajs-server/lib/app.js", "--config-file", "devserverconfig.json" ]
