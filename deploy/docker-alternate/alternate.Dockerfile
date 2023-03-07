@@ -13,7 +13,7 @@ RUN yarn install
 
 COPY . .
 
-RUN rm wwwroot/config.json && ln -s /etc/config/client/config.json wwwroot/config.json
+#RUN rm wwwroot/config.json && ln -s /etc/config/client/config.json wwwroot/config.json
 
 # Solomon build stage
 FROM build AS solomon_build
@@ -31,4 +31,4 @@ RUN yarn gulp release --build Solomons
 FROM solomon_build AS server
 EXPOSE 3001
 
-CMD [ "node", "./node_modules/terriajs-server/lib/app.js", "--config-file", "devserverconfig.json" ]
+# CMD [ "node", "./node_modules/terriajs-server/lib/app.js", "--config-file", "devserverconfig.json" ]
