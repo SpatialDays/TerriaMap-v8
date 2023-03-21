@@ -96,21 +96,6 @@ export function defaultBaseMaps(terria: Terria): BaseMapJson[] {
 
   baseMaps.push({
     item: {
-      id: "basemap-black-marble",
-      name: "NASA Black Marble",
-      type: "wms",
-      url: "http://geoserver.nationalmap.nicta.com.au/imagery/nasa-black-marble/wms",
-      attribution:
-        "<a href='https://earthobservatory.nasa.gov/Features/NightLights'>Black Marble</a> - From NASA's Earth Observatory. <a href='https://earthobservatory.nasa.gov/image-use-policy'>Use Policy</a>.",
-      layers: "nasa-black-marble:dnb_land_ocean_ice.2012.54000x27000_geo",
-      opacity: 1.0
-    },
-    image: "build/TerriaJS/images/black-marble.png",
-    contrastColor: "#ffffff"
-  });
-
-  baseMaps.push({
-    item: {
       id: "basemap-positron",
       name: "Positron (Light)",
       type: "open-street-map",
